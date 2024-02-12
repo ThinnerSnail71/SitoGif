@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #backgroundContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #backgroundNebula {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        #backgroundWaves {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            animation: waveAnimation 10s linear infinite;
+        }
+
+        @keyframes waveAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body onclick="changePage()">
+    <div id="backgroundContainer">
+        <!-- GIF di nebulosa in background -->
+        <img id="backgroundNebula" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHd4bjI3cndicTdncWpmcmNzY2l1dnIyZmc1Yml3Y253cjFkczJiYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/b61wEXKPffqr7e51iA/source.gif" alt="">
+    </div>
+
+    <!-- GIF di onde in background -->
+    <img id="backgroundWaves" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejZveHBkMms2bnpmOHpyeTdhc2F1dW4ybnk0YnloOXE5enFhbTFhZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KNs9CW64TMQzDVIemZ/source.gif" alt="">
+
+    <!-- Il resto del tuo contenuto HTML -->
+
+    <script>
+        // Funzione per cambiare pagina
+        function changePage() {
+            // Sostituisci 'nuova_pagina.html' con il percorso della pagina a cui vuoi cambiare
+            window.location.href = 'Pagina_3.html';
+        }
+    </script>
+</body>
+</html>
